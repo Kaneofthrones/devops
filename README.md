@@ -1,38 +1,38 @@
 # Devops
-Development environment setup
 
-<hr>
 
-* Install VirtualBox
-	* [Download VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-* Install Vagrant
-	[Download Vagrant](https://www.vagrantup.com/downloads.html)
+## Set up
+
+- Virtual Box
+- Install Vagrant
+- Vagrant Up
+- Vagrant ssh
+- Update apt-get
+- Install Nginx
+
+### Virtual Box
+Install [Vitural Box](https://www.virtualbox.org/wiki/Downloads) onto your machine, as it supports your enviroment.
+
+### Install Vagrant
+You will need to install [Vagrant](https://www.vagrantup.com/downloads.html) to get started. Click on Vagrant and check your operating System installation. Once downloaded and installed, pull this repository and move to the next part of the set up.
+
+### Vagrant up
+Once this repository is pulled on to your device, run the command: 
+
+```
+git clone git@github.com:Melson012/DevOp.git 
+cd DevOp
+vagrant up
+
+```
 	
+This will load up a virtual machine on your device, this command creates and configures guest machine. It will set up and download all the files it needs to run this virtual enviroment on your device.
+
+### Vagrant ssh
+After vagrant up has complete you will need to start the virtual guest machine session, the command: 
+
+```	
+vagrant ssh
+```
 	
-<hr> 
-
-### Build a Box
-
-You’ll need a project to work on, and a development environment configuration. For this we will use github, you can create your own repository or clone mine for testing purposes here: [github link](git@github.com:Kaneofthrones/devops.git)
-(if you need help with github, you can find the docs here: [Git Docs](https://git-scm.com/documentation)
-
-<hr>
-
-
-To power up your custom VM run the command `vagrant up` in your terminal (can take a while if it is your first time running this command)
-
-<hr>
-
-Once the VM is up, type the following command `vagrant ssh` 
-
-<hr>
-
-In the terminal update the operating system by running the following command: `sudo apt-get update -y`
-
-<hr>
-
-Now we need to install nginx by running the command `sudo apt-get install nginx`
-
-<hr>
-
-then type `development.local` into your browser to test the server is running 
+So you can interact and play in the development enviroment. Vagrant ssh allows you access a subtitue Operating system, in this case ubuntu/xenial64. Once it has loaded up your are good and ready to start coding on your own enviroment. 
