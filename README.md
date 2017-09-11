@@ -20,7 +20,7 @@ You will need to install [Vagrant](https://www.vagrantup.com/downloads.html) to 
 Once this repository is pulled on to your device, run the command: 
 
 ```
-git clone git@github.com:Melson012/DevOp.git 
+git clone git@github.com:Kaneofthrones/devops.git 
 cd DevOp
 vagrant up
 
