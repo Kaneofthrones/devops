@@ -11,3 +11,5 @@ sudo service nginx restart
 curl -sL https://deb.nodesource.com/setup_6.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
 sudo apt-get install nodejs -y
+sudo useradd --home /home/ubuntu/app app
+sudo chown -R app:app app
