@@ -14,7 +14,10 @@ Vagrant.configure("2") do |config|
   	web.vm.network "private_network", ip: "192.168.10.100"
   	web.hostsupdater.aliases = ["development.local"]
   	web.vm.synced_folder ".", "/home/ubuntu/app"
+
+    #provisioning
   	web.vm.provision "shell", path: "environment/web/provision.sh"
+    web.vm.provision "shell", inline: 'echo "export DB_HOST=mongodb://192.168.10.200/posts" >> .bashrc'
 
   end
 
