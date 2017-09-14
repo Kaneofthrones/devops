@@ -23,7 +23,7 @@ Vagrant.configure("2") do |config|
 
   	db.vm.box = "ubuntu/xenial64"
     db.vm.network "private_network", ip: "192.168.10.200"
-  	db.hostsupdater.aliases = ["development.local"]
+  	db.hostsupdater.aliases = ["database.local"]
   	db.vm.synced_folder ".", "/home/ubuntu/app"
   	db.vm.provision "shell", path: "environment/db/mongodb.sh"
 
