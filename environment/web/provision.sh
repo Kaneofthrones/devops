@@ -1,7 +1,7 @@
 #!/bin/bash
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update -y
-sudo apt-get upgrade -y
+#sudo apt-get upgrade -y
 sudo apt-get install nginx -y
 sudo npm install pm2 -g
 sudo rm /etc/nginx/sites-available/default
