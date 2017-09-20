@@ -1,0 +1,7 @@
+DEPENDENCIES
+  db
+    git: git@github.com:Kaneofthrones/db-cookbook.git
+    revision: c65d45f8cc9e0408a33228067f9ac0de72debd82
+
+GRAPH
+  db (0.3.0)

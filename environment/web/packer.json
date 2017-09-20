@@ -32,8 +32,9 @@
 			"destination": "/home/ubuntu/app"
 		},
 		{
-			"type": "shell",
-			"script": "../web/provision.sh"
+			"type": "chef-solo",
+			"cookbook_paths": ["cookbooks"],
+			"run_list":["web::default"]
 		}
 	]
 }

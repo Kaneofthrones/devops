@@ -24,7 +24,17 @@
 	"provisioners": [
 		{
 			"type": "shell",
-			"script": "../db/mongodb.sh"
+			"inline": ["mkdir /home/ubuntu/app"]
+		},
+		{
+			"type": "file",
+			"source": "../../",
+			"destination": "/home/ubuntu/app"
+		},
+		{
+			"type": "chef-solo",
+			"cookbook_paths": ["cookbooks"],
+			"run_list":["db::default"]
 		}
 	]
 }

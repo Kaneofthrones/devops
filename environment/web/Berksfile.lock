@@ -1,0 +1,7 @@
+DEPENDENCIES
+  web
+    git: git@github.com:Kaneofthrones/node-cookbook.git
+    revision: 9b39693621cde19e5b8388723b33be89a727826e
+
+GRAPH
+  web (0.1.0)

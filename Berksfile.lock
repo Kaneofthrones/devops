@@ -1,0 +1,11 @@
+DEPENDENCIES
+  db
+    git: git@github.com:Kaneofthrones/db-cookbook.git
+    revision: b86fa774f6aaeba36690e20a827b5ccb6afe8039
+  web
+    git: git@github.com:Kaneofthrones/node-cookbook.git
+    revision: 9b39693621cde19e5b8388723b33be89a727826e
+
+GRAPH
+  db (0.2.0)
+  web (0.1.0)
