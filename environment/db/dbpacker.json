@@ -33,7 +33,7 @@
 		},
 		{
 			"type": "chef-solo",
-			"cookbook_paths": ["cookbooks"],
+			"cookbook_paths": ["../../cookbooks"],
 			"run_list":["db::default"]
 		}
 	]
