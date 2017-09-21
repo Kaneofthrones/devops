@@ -28,7 +28,7 @@
 		},
 		{
 			"type": "file",
-			"source": "../../",
+			"source": ".",
 			"destination": "/home/ubuntu/app"
 		},
 		{
