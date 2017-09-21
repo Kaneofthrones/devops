@@ -12,6 +12,20 @@ provider "aws" {
 #   vpc      = true
 # }
 
+data "aws_ami" "kaneweb" {
+  filter {
+    name   = "state"
+    values = ["available"]
+  }
+
+  filter {
+    name   = "name"
+    values = ["kane-web-prod*"]
+  }
+
+  most_recent = true
+}
+
 #create VPC
 resource "aws_vpc" "kane" {
   tags {
@@ -93,7 +107,7 @@ data "template_file" "init_script" {
 # Create a new instance of the latest Ubuntu 14.04 on an
 # t2.micro node with an AWS Tag naming it "HelloWorld"
 resource "aws_instance" "web-kane" {
-  ami           = "ami-59c3d03d"
+  ami           = "${data.aws_ami.kaneweb.id}"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["${aws_security_group.http-kane.id}"]
   subnet_id = "${aws_subnet.web.id}"
